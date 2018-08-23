@@ -1,0 +1,28 @@
+---
+title: "primerRmd"
+author: "yo"
+date: "23 de agosto de 2018"
+output: html_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Simular unos datos
+
+```{r simula, echo=TRUE }
+N <- rpois(1,91)
+x <- runif(N,0,1)
+y <- runif(N,0,1)
+
+d <- data.frame(x,y)
+```
+
+```{r tabla, echo=FALSE}
+library(knitr)
+kable(summary(d))
+
+
+```
